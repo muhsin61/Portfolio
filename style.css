@@ -10,41 +10,79 @@ p{
 .main{
     margin: 0 auto;
     width: 80%;
-    height: 150px;
     background: #FFFFFF;
     border-radius: 12px;
-    border: springgreen 1px solid;
+}
+.mainFirst{
+    box-shadow: -2px 1px 7px 2px rgba(0,0,0,0.13);    height: 100%;
+    border-radius: 12px;
+    padding: 20px;
+    height: 190px;
 }
 .myImg{
     position: relative;
     width: 150px;
     height: 150px;
-    background: red;
     border-radius: 12px;
     float: left;
 }
 .myImg img{
     width: 100%;
+    border-radius: 12px;
     height: auto;
 }
 .mainInfo{
     display: block;
     width: 100%;
-    border: steelblue 1px solid;
     height: 100px;
 }
 .myInfo{
     float: left;
 }
+a{
+    display: block;
+    text-decoration: none;
+}
+span{
+    position: relative;
+    top: 8px;
+}
+.name p, .myInfoText{
+    padding-left: 30px;
+}
+.name p:nth-child(1){
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #4F4F4F;
+}
+.name p:nth-child(2){
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #828282;
+}
 .myCom{
     float: right;
+}
+.myCom p, .myCom a{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #4F4F4F;
+}
+.myInfoText{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #828282;
+    float: left;
 }
 .knowledge{
     float: left;
     width: 30%;
     height: auto;
     margin-top: 20px;
-    border: steelblue 1px solid;
 }
 .line{
     display: inline-block;
@@ -70,23 +108,36 @@ p{
 
 @media screen and (max-width: 15cm) {
     .main{
-        height: 200px;
+        height: auto;
+    }
+    .mainFirst{
+        height: auto;
     }
     .myImg{
         width: 100%;
         height: auto;
+        display: block;
+        float: none;
     }
     .myInfo{
+        display: block;
         float: none;
     }
     .myCom{
         float: none;
+        display: block;
     }
     .mainInfo{
-        height: 500px;
+        height: auto;
+        display: block;
+    }
+    .myInfoText{
+        float: none;
     }
     .knowledge{
         float: none;
+        display: block;
+        height: 100px;
     }
 }
 
