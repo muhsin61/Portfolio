@@ -1,0 +1,99 @@
+*{
+    box-sizing: border-box;
+    font-family: Montserrat;
+    font-style: normal;
+}
+p{
+    padding: 0;
+    margin: 0;
+}
+.main{
+    margin: 0 auto;
+    width: 80%;
+    height: 150px;
+    background: #FFFFFF;
+    border-radius: 12px;
+    border: springgreen 1px solid;
+}
+.myImg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background: red;
+    border-radius: 12px;
+    float: left;
+}
+.myImg img{
+    width: 100%;
+    height: auto;
+}
+.mainInfo{
+    display: block;
+    width: 100%;
+    border: steelblue 1px solid;
+    height: 100px;
+}
+.myInfo{
+    float: left;
+}
+.myCom{
+    float: right;
+}
+.knowledge{
+    float: left;
+    width: 30%;
+    height: auto;
+    margin-top: 20px;
+    border: steelblue 1px solid;
+}
+.line{
+    display: inline-block;
+    width: 50px;
+    height: 5px;
+    background: #C4C4C4;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: 8px;
+}
+.colorLine{
+    display: inline-block;
+    position: relative;
+    width: 25px;
+    height: 5px;
+    background: rgba(47, 128, 237, 0.7);
+    z-index: 1;
+    padding: 0;
+    margin: 0;
+    top: -10px;
+}
+
+@media screen and (max-width: 15cm) {
+    .main{
+        height: 200px;
+    }
+    .myImg{
+        width: 100%;
+        height: auto;
+    }
+    .myInfo{
+        float: none;
+    }
+    .myCom{
+        float: none;
+    }
+    .mainInfo{
+        height: 500px;
+    }
+    .knowledge{
+        float: none;
+    }
+}
+
+
+
+
+
+
+
+
