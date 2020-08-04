@@ -1,39 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Muhsin</title>
 </head>
+
 <body>
     <div class="main">
         <div class="mainFirst">
             <div class="myImg"><img src="me.jpg" alt=""></div>
             <div class="mainInfo">
                 <div class="myInfo">
-                    <div class="name"><p>Muhsin Köse</p><p>Software Developer</p></div>
+                    <div class="name">
+                        <p>Muhsin Köse</p>
+                        <p>Software Developer</p>
+                    </div>
                 </div>
                 <div class="myCom">
                     <p><span class="material-icons">email</span>muhsin.mk61@gmail.com</p>
                     <p><span class="material-icons">call</span>(+90) 531 855 93 92</p>
                     <a href="https://github.com/muhsin61"><span class="material-icons">public</span>Github</a>
-                    <a href="https://www.linkedin.com/in/muhsin61/"><span class="material-icons">business_center</span>Linkedn</a>
+                    <a href="https://www.linkedin.com/in/muhsin61/"><span
+                            class="material-icons">business_center</span>Linkedn</a>
                 </div>
             </div>
             <div>
                 <p class="myInfoText">I am a software developer who is willing to learn and coding.</p>
             </div>
         </div>
-        
+
         <div class="knowledge">
-                <div class="know">Vue<div class="line"><div class="colorLine"></div></div></div>
+            <div class="know" id="know">
+                <div v-for="know in knows">{{ know.text }}<div class="line">
+                        <div class="colorLine" :style="know.style"></div>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <div class="blog">
+            <p>Blog 3</p>
+            <div class="blogs" id="blog">
+                <div v-for="blog in blogs">
+                    <div class="blogText">{{blog.text}}</div>
+                    <div class="blogPhoto"><img :src="blog.photo" class="blogImg"></div>
+                    <button>ileri</button>
+                </div>
+
+            </div>
+        </div>
+
     </div>
     <div class="hobbies"></div>
-    <div class="blog"></div>
     <div class="project"></div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        let know = new Vue({
+            el: '#know',
+            data: {
+                knows: [
+                    { text: 'Vue', style: "width: 35px" },
+                    { text: 'Vuex', style: "width: 35px" },
+                    { text: 'React', style: "width: 20px" },
+                    { text: 'HTML5', style: "width: 35px" },
+                    { text: 'CSS3', style: "width: 35px" },
+                    { text: 'Python', style: "width: 25px" },
+                ]
+            }
+        });
+ 
+        let blog = new Vue({
+            el: '#blog',
+            data: {
+                blogs: [
+                { text: 'Css ile Hamburger Menu Yapımı', photo: "https://miro.medium.com/max/700/1*y0ua4HRNArbnsnmG2ZjuaQ.gif", link:"https://medium.com/@muhsinkse/css-ile-hamburger-menu-yap%C4%B1m%C4%B1-3a3a9dc743f7" },
+                { text: 'ESP32 Arduino Ide Kurulumu', photo: "https://miro.medium.com/max/700/1*W0fm5HfJJQoZnFeIigv88A.jpeg", link:"https://medium.com/@muhsinkse/esp32-arduino-ide-kurulumu-66c68a939dd" },
+                { text: 'Chart.js’e Giriş', photo: "https://www.chartjs.org/img/chartjs-logo.svg", link:"https://medium.com/@muhsinkse/chart-jse-giri%C5%9F-6d2f698e9dc3" },
+                ]
+            }
+            })
+    </script>
 </body>
+
 </html>
