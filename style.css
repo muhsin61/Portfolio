@@ -86,6 +86,13 @@ span{
     box-shadow: -2px 1px 7px 2px rgba(0,0,0,0.13);    height: 100%;
     padding: 20px;
 }
+.knowledge h2{
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #4F4F4F;
+}
 .know{
     font-weight: 500;
     font-size: 16px;
@@ -95,7 +102,7 @@ span{
 }
 .line{
     display: inline-block;
-    width: 50px;
+    width: 200px;
     height: 5px;
     background: #C4C4C4;
     padding: 0;
@@ -118,16 +125,26 @@ span{
     border-radius: 12px;
 }
 .blog{
-    float: left;
-    width: 60%;
+    float: right;
+    width: 65%;
     margin-top: 20px;
     margin-left: 20px;
     box-shadow: -2px 1px 7px 2px rgba(0,0,0,0.13);    height: 100%;
     padding: 20px;
 }
+.blog p:nth-child(1){
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #E0E0E0;
+}
 .blogText{
     float: left;
     width: 50%;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #333333;
 }
 .blogPhoto{
     float: left;
@@ -137,7 +154,52 @@ span{
     width: 100%;
     height: auto;
 }
+.blog button{
+  margin-left: 45% ;
+}
+.blogs span{
+    position: relative;
+    top: 2px;
+    padding: 0;
+    margin: 0;
+}
+.hobbies{
+    float: left;
+    width: 30%;
+    box-shadow: -2px 1px 7px 2px rgba(0,0,0,0.13);    height: 100%;
+    padding: 20px;
+    margin-top: 20px;
+}
+.hobbies h2{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #4F4F4F;
+}
+.hobbies img{
+    width: 100%;
+    height: auto;
+}
+.hobbies p{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #333333;
+}
+.project{
+    float: right;
+    width: 65%;
+    margin-top: 20px;
+    box-shadow: -2px 1px 7px 2px rgba(0,0,0,0.13);    height: 100%;
+    padding: 20px;
+}
+.project h5{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #4F4F4F;
 
+}
 @media screen and (max-width: 15cm) {
     .main{
         height: auto;
@@ -169,6 +231,13 @@ span{
     .knowledge{
         float: none;
         display: block;
+        width: 100%;
+    }
+    .blog{
+        width: 100%;
+        margin-left: 0px;
+    }
+    .hobbies{
         width: 100%;
     }
 }
