@@ -200,6 +200,14 @@ span{
     color: #4F4F4F;
 
 }
+.project div img{
+    width: 50%;
+    float: left;
+}
+.project div div{
+    width: 50%;
+    float: left;
+}
 @media screen and (max-width: 15cm) {
     .main{
         height: auto;
@@ -238,6 +246,9 @@ span{
         margin-left: 0px;
     }
     .hobbies{
+        width: 100%;
+    }
+    .project{
         width: 100%;
     }
 }
