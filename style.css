@@ -7,6 +7,9 @@ p{
     padding: 0;
     margin: 0;
 }
+img{
+    border-radius: 12px;
+}
 .main{
     margin: 0 auto;
     width: 80%;
@@ -198,7 +201,12 @@ span{
     font-size: 18px;
     line-height: 22px;
     color: #4F4F4F;
-
+}
+.project p{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #333333;
 }
 .project div img{
     width: 50%;
@@ -207,10 +215,45 @@ span{
 .project div div{
     width: 50%;
     float: left;
+    text-align: center;
+}
+.project button{
+    margin-left: 21.7%;
+
+}
+.project a{
+    display: inline-block;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 5px;
+}
+.project a:nth-child(2){
+    background: #5C94E1;
+    border-radius: 12px;
+    color: white;
+}.project a:nth-child(3){
+    border: 1px solid #5C94E1;
+    border-radius: 12px;
+    color: #5C94E1;
+}
+.project button span{
+    position: relative;
+    top: -0px;
+}
+
+button {
+    background: none;
+    border: 1px solid #5C94E1;
+    border-radius: 12px;
+    color: #5C94E1;
+    margin-left: auto;
+    margin-right: auto;
 }
 @media screen and (max-width: 15cm) {
     .main{
         height: auto;
+        width: 95%;
     }
     .mainFirst{
         height: auto;
@@ -233,6 +276,9 @@ span{
         height: auto;
         display: block;
     }
+    .name p, .myInfoText{
+        padding-left: 0px;
+    }
     .myInfoText{
         float: none;
     }
@@ -251,12 +297,18 @@ span{
     .project{
         width: 100%;
     }
+    .project div img{
+        width: 100%;
+    }
+    .project button{
+        display: block;
+    }
+    .project div div{
+        width: 100%;
+        text-align: center;
+    }
+    .project button{
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
-
-
-
-
-
-
-
-
