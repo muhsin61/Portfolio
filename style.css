@@ -149,6 +149,12 @@ span{
     line-height: 29px;
     color: #333333;
 }
+.blogText a{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #333333;
+}
 .blogPhoto{
     float: left;
     width: 50%;

@@ -48,8 +48,12 @@
             <p>Blog (3)</p>
             <div class="blogs" id="blog">
                 <div>
-                    <div class="blogText">{{blogs[number].text}}</div>
-                    <div class="blogPhoto"><img :src="blogs[number].photo" class="blogImg"></div>
+                    <a href=""></a>
+                    <div class="blogText"><a :href="blogs[number].link">{{blogs[number].text}}</a></div>
+
+                    <div class="blogPhoto"><a :href="blogs[number].link"><img :src="blogs[number].photo"
+                                class="blogImg"></a>
+                    </div>
                     <button v-on:click="change"><span class="material-icons">keyboard_arrow_right</span></button>
                 </div>
             </div>
@@ -120,18 +124,18 @@
         let project = new Vue({
             el: '#project',
             data: {
-                number : 0,
+                number: 0,
                 projects: [
-                    { text: 'Vue Github Jobs', photo: "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FJobSearchThumbnail.png?alt=media&token=59d40095-f280-478f-a8c9-dc9d49f14471", github: "https://github.com/muhsin61/Vue.js-Github-Jobs",demo:"https://codesandbox.io/s/vuejs-github-jobs-b2te8" },
-                    { text: 'Vue Weather App', photo: "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FweatherThumbnail.png?alt=media&token=7645edd7-df0f-4ea1-9a8c-2bab7fe01431", link: "https://github.com/muhsin61/Vue-Weather-App",demo:"https://codesandbox.io/s/vuejs-weather-app-i3n0l" },
-                    { text: 'Vue Country Quiz', photo: "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FcountryQuizThumbnail.png?alt=media&token=761f3109-120d-4111-96b3-98ef934281b6", link: "https://github.com/muhsin61/VueCountryQuiz",demo:"https://codesandbox.io/s/country-quiz-vuejs-0oheg" },
+                    { text: 'Vue Github Jobs', photo: "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FJobSearchThumbnail.png?alt=media&token=59d40095-f280-478f-a8c9-dc9d49f14471", github: "https://github.com/muhsin61/Vue.js-Github-Jobs", demo: "https://codesandbox.io/s/vuejs-github-jobs-b2te8" },
+                    { text: 'Vue Weather App', photo: "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FweatherThumbnail.png?alt=media&token=7645edd7-df0f-4ea1-9a8c-2bab7fe01431", link: "https://github.com/muhsin61/Vue-Weather-App", demo: "https://codesandbox.io/s/vuejs-weather-app-i3n0l" },
+                    { text: 'Vue Country Quiz', photo: "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FcountryQuizThumbnail.png?alt=media&token=761f3109-120d-4111-96b3-98ef934281b6", link: "https://github.com/muhsin61/VueCountryQuiz", demo: "https://codesandbox.io/s/country-quiz-vuejs-0oheg" },
 
-                    { text: 'Vue Random Quote Generator', photo: "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FquoteThumbnail.png?alt=media&token=156a0ff0-506a-4246-8422-eb1cedab5116", link: "https://github.com/muhsin61/VueRandomQuoteGenerator",demo:"https://codesandbox.io/s/random-quote-generator-vuejs-rpwv4" },
-                    { text: 'Vue Todo List', photo: "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FtodoThumbnail.png?alt=media&token=67a62272-6021-49de-ab19-cda0344d643c", link: "https://github.com/muhsin61/VueTodoList",demo:"https://codesandbox.io/s/vue-todo-app-zlfk3" },
-                    
-                    { text: 'React Movie Search', photo: "", link: "https://github.com/muhsin61/ReactSearchMovieApp",demo:"https://codesandbox.io/s/react-movie-search-app-pxepk" },
-                    { text: 'React Input Components', photo: "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FInputThumbnail.png?alt=media&token=73685593-9026-42a6-8c68-00243071250e", link: "https://github.com/muhsin61/DevChallenges-React-Input",demo:"https://codesandbox.io/s/reactjs-input-pf7rg" },
-                    { text: 'React WindBnb', photo: "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FwindbnbThumbnail.png?alt=media&token=183d7d36-d216-4d30-9732-aa6e4ab0e8a5", link: "https://github.com/muhsin61/ReactJsWindBnb",demo:"https://codesandbox.io/s/react-windbnb-qcdfq" },
+                    { text: 'Vue Random Quote Generator', photo: "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FquoteThumbnail.png?alt=media&token=156a0ff0-506a-4246-8422-eb1cedab5116", link: "https://github.com/muhsin61/VueRandomQuoteGenerator", demo: "https://codesandbox.io/s/random-quote-generator-vuejs-rpwv4" },
+                    { text: 'Vue Todo List', photo: "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FtodoThumbnail.png?alt=media&token=67a62272-6021-49de-ab19-cda0344d643c", link: "https://github.com/muhsin61/VueTodoList", demo: "https://codesandbox.io/s/vue-todo-app-zlfk3" },
+
+                    { text: 'React Movie Search', photo: "", link: "https://github.com/muhsin61/ReactSearchMovieApp", demo: "https://codesandbox.io/s/react-movie-search-app-pxepk" },
+                    { text: 'React Input Components', photo: "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FInputThumbnail.png?alt=media&token=73685593-9026-42a6-8c68-00243071250e", link: "https://github.com/muhsin61/DevChallenges-React-Input", demo: "https://codesandbox.io/s/reactjs-input-pf7rg" },
+                    { text: 'React WindBnb', photo: "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FwindbnbThumbnail.png?alt=media&token=183d7d36-d216-4d30-9732-aa6e4ab0e8a5", link: "https://github.com/muhsin61/ReactJsWindBnb", demo: "https://codesandbox.io/s/react-windbnb-qcdfq" },
                 ],
             },
             methods: {
